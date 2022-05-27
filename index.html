@@ -1,0 +1,187 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+    {# ez egy django komment #}
+
+    {% comment %}
+    hello
+    {% endcomment %}
+
+</head>
+<body>
+    <h1>Kampány szavazólap</h1>
+ 
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <p>Melyik volt a legjobb osztály?</p>
+
+        <div clas="a">
+
+            <input type="radio" id="10A" name="valasztas" value="10A">
+            <label for="10A">10/A (kampány név)</label><br>
+
+        </div>
+
+        <div clas="a">
+
+            <input type="radio" id="11B" name="valasztas" value="11B">
+            <label for="11B">11/B (kampány név)</label><br>
+            
+        </div>
+
+        <div clas="a">
+
+            <input type="radio" id="11D" name="valasztas" value="11D">
+            <label for="11D">11/D (kampány név)</label><br>
+            
+        </div>
+
+        <div clas="a">
+
+            <input type="radio" id="10E" name="valasztas" value="10E">
+            <label for="10E">10/E (kampány név)</label><br>
+            
+        </div>
+
+        <div clas="a">
+
+            <input type="radio" id="10F" name="valasztas" value="10F">
+            <label for="10F">10/F (kampány név)</label><br>
+            
+        </div>
+
+        <p>Melyik volt a legjobb osztálytánc?</p>
+
+        <div class="b">
+
+            <input type="radio" id="10A_tanc" name="valasztas_tanc" value="10A">
+            <label for="10A_tanc">10/A (kampány név)</label><br>
+
+        </div>
+
+        <div class="b">
+
+            <input type="radio" id="11B_tanc" name="valasztas_tanc" value="11B">
+            <label for="11B_tanc">11/B (kampány név)</label><br>   
+            
+        </div>
+
+        <div class="b">
+
+            <input type="radio" id="11D_tanc" name="valasztas_tanc" value="11D">
+            <label for="11D_tanc">11/D (kampány név)</label><br>
+            
+        </div>
+
+        <div class="b">
+
+            <input type="radio" id="10E_tanc" name="valasztas_tanc" value="10E">
+            <label for="10E_tanc">10/E (kampány név)</label><br>
+            
+        </div>
+
+        <div class="b">
+
+            <input type="radio" id="10F_tanc" name="valasztas_tanc" value="10F">
+            <label for="10F_tanc">10/F (kampány név)</label><br>
+            
+        </div>
+
+        <p>Kinek a standja tetszett a legjobban?</p>
+
+        <div class="c">
+
+            <input type="radio" id="10A_stand" name="valasztas_stand" value="10A">
+            <label for="10A_stand">10/A (kampány név)</label><br>
+
+        </div>
+
+        <div class="c">
+
+            <input type="radio" id="11B_stand" name="valasztas_stand" value="11B">
+            <label for="11B_stand">11/B (kampány név)</label><br>
+    
+            
+        </div>
+
+        <div class="c">
+
+            <input type="radio" id="11D_stand" name="valasztas_stand" value="11D">
+            <label for="11D_stand">11/D (kampány név)</label><br>
+            
+        </div>
+
+        <div class="c">
+
+            <input type="radio" id="10E_stand" name="valasztas_stand" value="10E">
+            <label for="10E_stand">10/E (kampány név)</label><br>
+            
+        </div>
+
+        <div class="c">
+
+            <input type="radio" id="10F_stand" name="valasztas_stand" value="10F">
+            <label for="10F_stand">10/F (kampány név)</label><br>    
+            
+        </div>
+
+        <p>Melyik osztály csinálta a legjobb programokat?</p>
+
+        <div class="d">
+
+            <input type="radio" id="10A_programok" name="valasztas_programok" value="10A">
+            <label for="10A_programok">10/A (kampány név)</label><br>
+
+        </div>
+
+        <div class="d">
+
+            <input type="radio" id="11B_programok" name="valasztas_programok" value="11B">
+            <label for="11B_programok">11/B (kampány név)</label><br>
+
+        </div>
+
+        <div class="d">
+
+            <input type="radio" id="11D_programok" name="valasztas_programok" value="11D">
+            <label for="11D_programok">11/D (kampány név)</label><br>
+
+        </div>
+
+        <div class="d">
+
+            <input type="radio" id="10E_programok" name="valasztas_programok" value="10E">
+            <label for="10E_programok">10/E (kampány név)</label><br>
+
+        </div>
+
+        <div class="d">
+
+            <input type="radio" id="10F_programok" name="valasztas_programok" value="10F">
+            <label for="10F_programok">10/F (kampány név)</label><br>
+
+        </div>
+
+        <br>        
+        <input type="submit">
+    </form>
+      
+      <br>  
+    <a href="http://127.0.0.1:8000/accounts/logout/">Kijelentkezés</a>
+    {{ userneve }}
+</body>
+
+</html>
